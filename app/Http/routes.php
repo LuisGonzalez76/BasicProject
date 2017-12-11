@@ -14,3 +14,22 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('api/facilities', 'FacilityController@all');
+
+Route::get('api/facilities/{$id}','FacilityController@show');
+
+Route::post('api/facilities','FacilityController@create');
+
+
+Route::get('api/activities', 'ActivityController@all');
+
+Route::get('api/activities','ActivityController@create');
+
+Route::get('api/activities/{id}', 'ActivityController@show');
+
+
+Route::get('api/organizations','OrganizationController@all');
+
+Route::get('api/organizations', 'OrganizationController@create');
+
